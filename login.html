@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/css/user.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default custom-header">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><a class="navbar-brand navbar-link" href="#"><span>logo </span>Notebook </a></div>
+            <div class="collapse navbar-collapse" id="navbar-collapse"></div>
+        </div>
+    </nav>
+    <h2></h2>
+
+  <div id="wrapper" style="top:42%;bottom:42%;left:0;right:0;margin:auto auto;">
+      <div id="one"><button class="mode2" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></div>
+   
+      <div id="two"><button class="mode" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">signin</button></div>
+    </div>
+<div id="id01" class="modal" >
+        <form method="post" class="form-signin">
+            <input class="form-control" type="text" name="username" placeholder="User Name"  id="username">
+            <input class="form-control" type="password"  placeholder="Password" id="password">
+            <div class="checkbox">
+                <div class="checkbox">
+    
+                    <label>
+                        <input type="checkbox">Remember me</label>
+                </div>
+            </div>
+            <div>
+               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+            <button class="btn btn-primary btn-block btn-lg btn-signin" style=" width: 50%;float: right;margin:auto"type="button" id="login">Log in</button>
+                </div>
+        </form><a href="#" class="forgot-password">Forgot your password?</a></div>
+    <div id="id02" class="modal">
+        <form class="form-signin">
+            <input class="form-control" type="text" name="username" required="" placeholder="User Name" autofocus="" id="inputEmail">
+            <input class="form-control" type="email" name="username" required="" placeholder="Email" autofocus="" id="inputEmail">
+            <input class="form-control" type="password" required="" placeholder="Password" id="inputPassword">
+            <div class="checkbox">
+                
+            </div>
+            <div><button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button> 
+                <button class="btn btn-primary btn-block btn-lg btn-signin" style=" width: 50%;float: right;"type="submit">Log in</button></div>
+        </form></div>
+     
+       
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#login').click(function() {
+                $.ajax({
+                        type: "POST",
+                        url: "api/auth",
+                        processData: false,
+                        contentType: "application/json",
+                        data: '{ "username": "'+ $("#username").val() +'", "password": "'+ $("#password").val() +'" }',
+                        success: function(r) {
+                                console.log(r)
+                        },
+                        error: function(r) {
+                                setTimeout(function() {
+                                $('[data-bs-hover-animate]').removeClass('animated ' + $('[data-bs-hover-animate]').attr('data-bs-hover-animate'));
+                                }, 2000)
+                                $('[data-bs-hover-animate]').addClass('animated ' + $('[data-bs-hover-animate]').attr('data-bs-hover-animate'))
+                                console.log(r)
+                        }
+                });
+        });
+    </script>
+
+    <footer>
+        <div >
+            <div class="footer-navigation">
+                <h3><a href="#"><span>logo </span>Notebook</a></h3>
+                <p class="company-name">Company Name © 2017 </p>
+            </div>
+        </div>
+      
+    </footer>
+    
+</body>
+
+</html>

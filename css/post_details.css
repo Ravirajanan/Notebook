@@ -1,0 +1,27 @@
+div.post-details {
+    width: auto;
+    margin: 40px;
+    float: left;
+}
+
+div.data {
+    width: 690px;
+    margin: 10px;
+    min-height: 200px;
+    float: left;
+    height: auto;
+    background: white;
+    border: 2px solid #eee;
+    box-shadow: 10px 10px 3px #eee;
+}
+
+div.comments {
+    width: 430px;
+    float: left;
+    margin: 10px;
+    min-height: 200px;
+    height: auto;
+    background: white;
+    border: 2px solid #eee;
+    box-shadow: 10px 10px 3px #eee;
+}

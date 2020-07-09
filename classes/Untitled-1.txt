@@ -1,0 +1,30 @@
+echo '<form method=\'post\'>';
+                    
+                    $count = DB::query('SELECT noquestions FROM qiuz WHERE id=:id ', array(':id'=>$quizid))[0]['noquestions'];
+                $questions = DB::query('SELECT * FROM qiuzdata WHERE qiuzid=:qiuzid ', array(':qiuzid'=>$quizid));
+                
+                 echo '<form method=\'post\'>';
+                
+                   
+                       
+                        if($no <= $count){
+                        $question = DB::query('SELECT question FROM qiuzdata WHERE quesno=:quesno',array(':quesno'=>$no))[0]['question'];
+                        echo '<h2>question'.$no.'of'.$count.'<h2>';
+                        echo '<h2 >'.$question.'</h1>';
+                   $que = DB::query('SELECT * FROM qiuzdata WHERE quesno=:quesno',array(':quesno'=>$no));
+                   foreach($que as $que2){
+                                    echo '<h4> <input type=\'radio\' name=\'ans\' value='.$que2['correct'].'>'.$que2['options'].'</input><h4>';
+                   }   
+                                    
+                        }
+                 echo '<input type="submit"  name="forward" value="NEXT"></div>';
+                 echo '</form>';
+                 echo '<form method=\'post\'>';
+                 echo '<input type="submit"  name="back" value="PRE"></div>';
+                 echo '</form>';
+                 echo '<br/>';
+                 echo '<form method=\'post\'>';
+                 for ($i=1;$i<=$count;$i++){
+                    echo '<input type="submit"  name="change" value='.$i.'>'.$i.'</div>';
+                }
+                echo '</form>';

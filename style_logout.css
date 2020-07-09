@@ -1,0 +1,60 @@
+body {
+    max-width: 1250px;
+    min-width: 1250px;
+    margin-left: auto;
+    margin-top: 0px;
+    margin-right: auto;
+}
+
+div.logout_div1 {
+    padding-top: 10px;
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+}
+
+h1.logout_div1_h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 200px;
+}
+
+p.logout_div1_p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    margin: 10px 5px;
+    padding: 5px 30px;
+    width: 90%;
+}
+
+div.logout_div2 {
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 50%;
+    float: left;
+}
+
+p.logout_div2_p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #595959;
+    font-size: 50px;
+    margin: 5px 2px;
+    width: 80%;
+    padding-top: 10px;
+    float: left;
+}
+
+input.logout_div2_bt {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    border: 0;
+    background-color: steelblue;
+    color: whitesmoke;
+    float: left;
+    padding: 5px 20px;
+}
+
+input.logout_div2_bt:hover,
+input.logout_div2_bt:focus {
+    background-color: whitesmoke;
+    color: black;
+}

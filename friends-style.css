@@ -1,0 +1,100 @@
+a.name_links,
+p.name_links {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+a.request {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    color: blue;
+    font-size: larger;
+    padding: 0px 10px;
+}
+
+a.request2 {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    color: red;
+    font-size: larger;
+    padding: 0px 10px;
+}
+
+a.request:hover,
+a.request:focus,
+a.request:active {
+    background-color: blue;
+    color: white;
+}
+
+a.request2:hover,
+a.request2:focus,
+a.request2:active {
+    background-color: red;
+    color: white;
+}
+
+div.name_box:hover,
+div.name_box:focus,
+div.name_box:active {
+    background-color: transparent;
+}
+
+div.name_box2:hover,
+div.name_box2:focus,
+div.name_box2:active {
+    background-color: transparent;
+    height: 50px;
+}
+
+div.one {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+div.one_one {
+    float: left;
+    width: 30%;
+    margin: 1.5%;
+    height: auto;
+}
+
+div.one_two {
+    float: left;
+    width: 60%;
+    margin: 1.5%;
+    height: auto;
+    border-left: black dashed 2px;
+}
+
+div.two_one,
+div.two_two {
+    float: left;
+    width: 46%;
+    height: auto;
+    margin: 2%;
+}
+
+div.yes {
+    display: none;
+}
+
+div.name_box,
+div.name_box2 {
+    width: 100%;
+    height: auto;
+    background-color: #ececea;
+    text-align: center;
+    padding: 15px 0;
+    margin: 2%;
+}
+
+h2 {
+    text-align: center;
+}

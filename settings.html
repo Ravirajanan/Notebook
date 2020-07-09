@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>only new style</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=fixed,maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+     <link rel="stylesheet" href="profile-style.css">
+	 	
+</head>
+<body>
+    <header >
+        <div class="information-container">
+            <div class="company">
+                <a role="presentation" class="name" href="#">NOTE BOOK</a>
+                    </div>            
+            <form>
+                        <div class="search-box">
+                            <input class="know" type="search" required placeholder="Search.." style="font-family: calibri;">
+                        </div>
+            </form>
+            <div class="name-network">
+                <a class="name-links" href="#">Close your BOOK</a>
+                <a class="name-links" href="#">INDEX</a>
+                <a class="name-links" href="#">Branch</a>
+                <a class="name-links" href="#">Timeline</a>
+            </div>
+            
+        </div>
+        
+    </header>
+    <div class="profile-links">
+        <a role="presentation" class="profile-data-buttons"  href="">Edit profile</a>
+        
+    </div>
+    <div class="about" id="change">
+        <div class="container">
+			<input type="text" name='username' value='raviraja'></input>
+			<input type="text" name='email' value=''></input>
+			<input type="text" name='branch' value=''></input>
+			
+			
+		
+		</div>
+    </div>
+    <script src="js/loader.js"></script>
+
+		<script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>
+</body>
+</html>
